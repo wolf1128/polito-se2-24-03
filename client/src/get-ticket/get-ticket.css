@@ -1,0 +1,221 @@
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-outline {
+    color: #103783;
+    border-color: #103783;
+}
+
+.btn-outline:hover {
+    background-color: #103783;
+    color: white;
+}
+
+
+/* Info Button */
+.info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.info-btn {
+    color: #103783;
+    border-color: white; 
+    background-color: white;
+}
+
+.info-btn:hover {
+    border-color: white; 
+}
+
+.info-text {
+    background-color: #838282;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Italian Post Office */
+.post-office {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 500px;
+}
+
+.post-office-icon {
+    margin-right: 20px;
+    color: #2b2b2b;
+    width: 25%; 
+    text-align: right;
+       
+}
+
+.post-office-title {
+    text-align: center;
+    font-size: 36px;
+    color: #2b2b2b;
+    width: 70%;
+    text-align: left;
+}
+
+/* Ticket Details */
+.ticket-details {
+    text-align: center;
+    font-weight: bold;
+    color: #103783;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+/* Ticket Number Box */
+.ticket-box {
+    border: 2px solid orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 20px;
+    margin: 20px auto; 
+    width: 250px;
+}
+
+/* Ticket Text */
+.ticket-text {
+    color: #2b2b2b;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Ticket Number */
+.ticket-number {
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+    font-size: 100px;
+    
+}
+
+/* Information Box */
+.information-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 500px;
+}
+
+/* waiting Time */
+.waiting-time {
+    width: 45%;
+    text-align: center;
+    color: #103783;
+    font-size: 24px;
+}
+
+/* Service Tipe */
+.service-type {
+    width: 45%;
+    color: #103783;
+    font-size: 24px;
+}
+
+/* waiting Time number */
+.waiting-time-number {
+    text-align: center;
+    color: #2b2b2b;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+/* Service Tipe number */
+.service-type-number {
+    text-align: center;
+    color: #2b2b2b;
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+
+/* Waiting Time and Service Type*/
+.wait-service {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+/* Get Your Receipt */
+.get-receipt {
+    margin-top: 20px;
+}
+
+.get-receipt-text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #103783;
+}
+
+/* Button Container */
+.button-container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.service-btn {
+    width: 200px;
+    height: 130px;
+    margin: 5px;
+    background-color: orange;
+    color: white;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.service-btn-01 {
+    border-radius: 15% 0% 0% 0% ;
+}
+.service-btn-02 {
+    border-radius: 0% 15% 0% 0% ;
+}
+.service-btn-03 {
+    border-radius: 0% 0% 15% 0% ;
+}
+.service-btn-04 {
+    border-radius: 0% 0% 0% 15% ;
+}
+
+/* Help button*/
+.help-box {
+    margin-top: 50px;        
+}
+
+.help-btn {
+    color: white;
+    background-color: #103783;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline:hover {
+    background-color: #103783;
+    color: white;
+}

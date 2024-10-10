@@ -3,85 +3,99 @@ import Button from 'react-bootstrap/Button';
 import { MdOutlineLocalPostOffice } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import myIcon from '../../assets/Down_Arrow.svg';
-import Overlay from 'react-bootstrap/Overlay';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import '../get-ticket.css';
 
 
 function Ticket() {
 
-    const [ticketNo, setTicketNo] = useState(0);
+    const [ticketNo, setTicketNo] = useState(110);
     const [waitingTime, setWaitingTime] = useState(0);
-    const [serviceType, setServiceType] = useState("");
+    const [serviceType, setServiceType] = useState("Service1");
     const [show, setShow] = useState(false);
 
     const target = useRef(null);
 
+    const renderTooltip = (props: any) => (
+        <Tooltip className="info-text" id="button-tooltip" {...props}>
+          Hey! Select any service from<br/>
+          below that you want to avail<br/>
+          to get a ticket. If you need <br/>
+          further help, call the staff.
+        </Tooltip>
+      );
+
 
     return (
         <>
-            <div style={{ border: '2px solid black', padding: '10px', borderRadius: '10px', width: '100px' }}>
-                Back
+            {/* Back Button */}
+            <div className='back-button'>
+                <Button className="btn btn-outline">Back</Button>
             </div>
 
-            <Button ref={target} onClick={() => setShow(!show)}>
-                <IoIosInformationCircleOutline size={28} />
-            </Button>
-            <Overlay target={target.current} show={show} placement="bottom">
-                {({
-                    placement: _placement,
-                    arrowProps: _arrowProps,
-                    show: _show,
-                    popper: _popper,
-                    hasDoneInitialMeasure: _hasDoneInitialMeasure,
-                    ...props
-                }) => (
-                    <div
-                        {...props}
-                        style={{
-                            position: 'absolute',
-                            backgroundColor: 'rgba(255, 100, 100, 0.85)',
-                            padding: '2px 10px',
-                            color: 'white',
-                            borderRadius: 3,
-                            ...props.style,
-                        }}
-                    >
-                        Hey! Select any service from below your want to avail to get a ticket. If you need further help call the staff
-                    </div>
-                )}
-            </Overlay>
-            <div>
-                <MdOutlineLocalPostOffice size={28} />
-            </div>
-            <h2>
-                Italian Post Office
-            </h2>
-            <h1>
-                Ticket Details
-            </h1>
-            <div style={{ border: '2px solid black', padding: '70px', borderRadius: '10px' }}>
-                <h3>Your Ticket Number</h3>
-                {ticketNo}
+            {/* Italian Post Office */}
+            <div className='post-office'>
+                <span className='post-office-icon'>
+                    <MdOutlineLocalPostOffice size={60} />
+                </span>  
+                <span className='post-office-title'> 
+                    Italian Post Office
+                </span>              
             </div>
 
-            <div>
-                <div>
-                    <h3>Waiting Time</h3>
-                    <h4>{waitingTime}</h4>
+            {/* Info Button */}
+            <div className='info'>
+            <OverlayTrigger
+                placement="bottom-start"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+                >
+                <Button className='info-btn'>
+                    <IoIosInformationCircleOutline size={28}/>
+                </Button>
+            </OverlayTrigger>
+            </div>
+            
+            {/* Ticket Details */}
+            <div className='ticket-details'>
+                <span>
+                    Ticket Details
+                </span>
+            </div>
+
+            {/* Ticket Number Box */}
+            <div className='ticket-box'>
+                <span className='ticket-text'>
+                    Your Ticket Number
+                </span>
+                <br/>
+                <span className='ticket-number'>
+                    {ticketNo}
+                </span>
+                
+            </div>
+            
+            {/* Information Box */}
+            <div className='information-box'>
+                <div className='waiting-time'>
+                    Waiting Time
+                    <div className='waiting-time-number'>{waitingTime}</div>
                 </div>
-                <div>
-                    <h3>Service Type</h3>
-                    <h4>{serviceType}</h4>
+                <div className='service-type'>
+                    Service Type
+                    <div className='service-type-number'>{serviceType}</div>
                 </div>
             </div>
 
-            <div>
-                <h2>Get your Recipt</h2>
-                <img src={myIcon} alt="My Local Icon" width="50" height="50" />
-
-
+            {/* Get Your Receipt */}
+            <div className='get-receipt'>
+                <span className='get-receipt-text'>
+                    Get your Receipt
+                </span>
+                <br/>    
+                <img src={myIcon} alt="My Local Icon" width="60" height="60" />
             </div>
-
-
         </>
     )
 }
