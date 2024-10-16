@@ -36,7 +36,7 @@ class TicketDAO {
           formattedDateTime,
           0,
           "in queue",
-          null
+          0
         );
 
         db.get(ticketID_query, (err: Error | null, row: any) => {
